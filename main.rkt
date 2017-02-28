@@ -2,6 +2,8 @@
 
 ;; A simple framework for running a queue of arbitrary tasks on a static number of worker threads
 
+(provide start-workers)
+
 (require racket/async-channel)
 
 ;; Spawns num-workers worker threads that each continuously run the next thunk from job-queue (an
